@@ -24,12 +24,29 @@
 
   background: $color-card-bg;
 
+  transition: $transition-base-duration;
+  &:hover {
+    transform: scale(120%);
+    .card__name {
+      color: $color-card-title_hovered;
+    }
+  }
+
+
   &__picture {
     align-self: center;
 
     width: 160px;
     height: 134px;
     margin-bottom: 40px;
+
+    transition: $transition-pic-duration;
+    transition-property: transform;
+
+    &:hover {
+      transform: scale(120%);
+      border: 3px solid $color-card-border;
+    }
   }
 
   &__name {
@@ -41,6 +58,8 @@
     font-weight: 500;
 
     color: $color-card-blue;
+
+    transition: $transition-base-duration;
   }
 
   &__code {
@@ -82,6 +101,8 @@
     background-color: $color-card-button;
 
     height: 40px;
+
+    transition: $transition-base-duration;
 
     &:hover {
       border-color: $color-card-button;
